@@ -1,0 +1,253 @@
+<?php 
+tcpdf();
+class MYPDF extends TCPDF {
+
+    //Page header
+    public function Header() {
+        // Logo
+        echo K_PATH_IMAGES;
+        $image_file = K_PATH_IMAGES.'logo_example.jpg';
+        $this->Image($image_file, 10, 10, 15, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        // Set font
+        $this->SetFont('helvetica', 'B', 20);
+        // Title
+        $this->Cell(0, 15, 'User Profile', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+    }
+
+    // Page footer
+    public function Footer() {
+        // Position at 15 mm from bottom
+        $this->SetY(-15);
+        // Set font
+        $this->SetFont('helvetica', 'I', 8);
+        // Page number
+        $this->Cell(0, 10, 'powered by Candidtechnologies '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
+    }
+}
+$obj_pdf = new MYPDF('P', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+$obj_pdf->SetCreator(PDF_CREATOR);
+$title = "PDF Report";
+$obj_pdf->SetTitle($title);
+$obj_pdf->SetHeaderData('', '', $title, '');
+$obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+$obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+$obj_pdf->SetDefaultMonospacedFont('helvetica');
+$obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+$obj_pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$obj_pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$obj_pdf->SetFont('helvetica', '', 9);
+$obj_pdf->setFontSubsetting(false);
+$obj_pdf->setFooterData(array(0,64,0), array(0,64,128));
+$obj_pdf->AddPage();
+//ob_start();
+$blood_group = '';
+if($view_profile->blood_group == 1)
+{ $blood_group =  'O+'; }
+ else if($view_profile->blood_group == 2)
+ { $blood_group = 'O-';}
+ else if($view_profile->blood_group == 3)
+ { $blood_group = 'A+';}
+ else if($view_profile->blood_group == 4)
+ { $blood_group = 'A-';} 
+ else if($view_profile->blood_group == 5)
+ { $blood_group = 'B+';}
+ else if($view_profile->blood_group == 6)
+ { $blood_group = 'B-';}
+ else if($view_profile->blood_group == 7)
+ { $blood_group = 'AB+';}
+ else if($view_profile->blood_group == 8)
+ { $blood_group = 'AB-';}
+ 
+ list($year,$month,$day) = explode("-",$view_profile->dob);
+    $year_diff  = date("Y") - $year;
+	$age =  $year_diff;
+    $month_diff = date("m") - $month;
+    $day_diff   = date("d") - $day;
+    if ($day_diff < 0 || $month_diff < 0) $year_diff--;
+    $age = $year_diff; 
+$spects  = ($view_profile->whether_using_spects == 1)?"Yes":"No";
+//$occupation = ($view_profile->occupation == 1)?"Services":"Business";
+$status = ($view_profile->status == 1)?'Active':'Deactive';
+$html ='<table border="1">
+<tr>
+ <td colspan=""><img src="'.base_url().'upload_profile/'.$view_profile->profile_pic.'" height="180px" width="180px" ></td>
+ <td>
+ <table border="1">
+ <tr>
+    <th>Candidate Name:</th>
+	<td>'.$view_profile->candidate_name.'</td>
+    </tr>
+   <tr>
+    <th>Gender:</th>
+      <td>'.ucfirst($view_profile->gender).'</td>
+  </tr>
+   <tr>
+       <th>Date:</th>
+      <td>'.date("d-m-Y",strtotime($view_profile->date)).'</td>
+      </tr>
+  <tr>
+  <th>Category:</th>
+  <td>'.ucfirst($view_profile->category).'</td>
+  </tr>  
+ <tr>
+        <th>Father\'s Name:</th>   
+        <td>'.$view_profile->father_name.'</td>
+  </tr>
+  <tr>
+    <th>Birth Place:</th>
+      <td>'.$view_profile->birth_place.'</td>
+  </tr>
+ </table> 
+ </td>
+</tr>
+  <tr>
+        <th>Mother\'s Name:</th>   
+        <td>'.$view_profile->mother_name.'</td>
+  </tr>
+  <tr>
+       <th>Residental Address:</th>
+     <td>'.$view_profile->residental_address.'</td>
+  </tr>
+  <tr>
+       <th>Phone Number:</th>   
+	   <td>'.$view_profile->phone_no.'</td>
+	   
+  </tr>
+  <tr>
+    <th>Mobile Number:</th>   
+   <td>'.$view_profile->mobile_no.'</td>
+  </tr>
+   <tr>
+    <th>House Type:</th>
+       <td>'.ucfirst($view_profile->house_type).'</td>
+  </tr>
+  <tr>
+    <th>Ownership:</th>
+        <td>'.ucfirst($view_profile->ownership).'</td>
+  </tr>
+  <tr>
+        <th>Date Of Birth:</th>
+		 <td>'.date('d-m-Y', strtotime($view_profile->dob)).'</td>
+           </tr>
+  <tr>
+       <th>Birth Time:</th>
+         <td>'.$view_profile->birth_time.'</td>
+  </tr>
+  
+  <tr>
+    <th>Email:</th>
+      <td>'.$view_profile->email.'</td>
+  </tr>
+  <tr>
+    <th>Height:</th>
+       <td>'.$view_profile->height.'</td>
+  </tr>
+  <tr>
+    <th>Colour:</th>
+     <td>'.ucfirst($view_profile->colour).'</td>
+  </tr>
+  <tr>
+    <th>Weight:</th>
+       <td>'.$view_profile->weight.'</td>
+  </tr>
+  <tr>
+    <th>Blood Group:</th>
+	<td>'.$blood_group.'</td>
+	</tr>
+  <tr>
+    <th>Whether Using Spects:</th>
+      <td>'.$spects.'</td>     
+  </tr> 
+  <tr>
+    <th>Diet:</th>
+	<td>'.ucfirst($view_profile->diet).'</td>
+  </tr>
+  <tr>
+       <th>Education:</th>
+	   <td>'.$view_profile->education.'</td>
+        </tr>
+  <tr>
+       <th>Education Area:</th>
+	   <td>'.$view_profile->educational_area.'</td>
+        </tr>
+  <tr>
+       <th>Working With:</th>
+	   <td>'.$view_profile->working_with.'</td>
+        </tr>
+  <tr>
+       <th>Professional Area:</th>
+	   <td>'.$view_profile->professional_area.'</td>
+        </tr>
+		
+  <tr>
+    <th>Occupation:</th>
+      <td>'.$view_profile->occupation.'</td>
+  </tr>
+  <tr>
+      <th>Occupation Address:</th>
+	  <td>'. $view_profile->occupation_address.'</td>
+  </tr>
+  <tr>
+      <th>Income:</th>
+	    <td>'.$view_profile->income.'</td>
+   </tr>
+  <tr>
+     <th>Occupation Add Of Parents:</th>
+       <td>'.$view_profile->occupation_add_of_parents.'</td>
+ 	 </tr>
+  <tr>
+      <th>Income of parents/Family:</th>
+         <td>'.$view_profile->family_income.'</td>
+  </tr>
+  <tr>
+      <th>Brothers Married:</th>
+         <td>'.$view_profile->brothers_married.'</td>
+  </tr>
+  <tr>
+      <th>Brothers unmarried:</th>
+         <td>'.$view_profile->brothers_unmarried.'</td>
+  </tr>
+  <tr>
+      <th>Sisters Married:</th>
+         <td>'.$view_profile->sisters_married.'</td>
+  </tr>
+  <tr>
+      <th>Sisters Unmarried:</th>
+         <td>'.$view_profile->sisters_unmarried.'</td>
+  </tr>
+  <tr>
+      <th>Origional Place In Sindh:</th>
+	  <td>'.$view_profile->origional_place_in_sindh.'</td>   
+   </tr>
+  <tr>
+      <th>Choice Of Candidate:</th>
+	  <td>'. ucfirst($view_profile->choice_of_candidate) .'</td>
+   </tr>
+  <tr>
+    <th>Any Disease in Candidate:</th>
+	<td>'. ucfirst($view_profile->any_disease_in_candidate).'</td>
+  </tr>
+  <tr>
+    <th>Handicap:</th>
+	  <td>'.ucfirst($view_profile->handicap).'</td>
+  </tr>
+  <tr>
+    <th>Dosh:</th>
+	   <td>'.ucfirst($view_profile->dosh).'</td>
+  </tr>
+  <tr>
+    <th>Status:</th>
+	   <td>'.$status .'</td>
+  </tr>
+  <tr>
+    <th>Age:</th>
+	<td>'.$age.'</td>
+  </tr>
+</table>';
+ // $content = ob_get_clean();
+//echo $html; die;
+$obj_pdf->writeHTML($html, true, false, true, false, '');
+$newfile = getcwd().'/pdf/profile-'.$view_profile->id.'.pdf';
+$obj_pdf->Output($newfile, 'F'); ?>
