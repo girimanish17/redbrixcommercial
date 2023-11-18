@@ -1,0 +1,302 @@
+@media screen and (max-width:1023px) {
+ 	
+	
+}
+ 
+
+@media screen and (max-width:767px) {
+.m-hide { display: none !important; }
+.d-hide { display: block !important; }
+header{  background: #0D263B!important; position: inherit;}	
+header .navbar {
+    padding: 10px;
+}
+header .navbar-brand img {
+    height: 45px;
+}	
+header .navbar-toggler-icon {
+    position: absolute;
+    right: 14px;
+    top: 23px;
+    background: url(../images/menu-b.svg) left top no-repeat;
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+}
+header .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    top: 75px;
+	z-index: 999;
+	padding: 15px 0;
+}
+header .navbar-expand-md .nav-item {
+   padding: 0 15px;
+}
+header .navbar-expand-md .navbar-nav .nav-link {
+    padding: 16px 10px;
+    color: #0d263b;
+}	
+header .navbar-expand-md .nav-item.add_listing .btn {
+    padding: 12px 15px 13px;
+    width: 100%;
+}
+	
+	
+	
+.heroarea {
+    padding: 75px 0 40px;
+}	
+.herotabs {
+    width: 100%;
+}	
+.heroarea h1 {
+   font-size: 26px;
+}	
+.heroarea p {
+    font-size: 16px;
+    margin: 10px 0 0;
+    line-height: 26px;
+}	
+.herotabs .search-btn {
+    position: inherit;
+    right: 0;
+    top: 0;
+    width: 100%;
+}	
+.asd {
+    padding-right: 0;
+}	
+.herotabs .tab-content {
+    padding: 20px 30px 25px;
+}	
+.homeabout {
+    padding: 40px 0;
+}
+.ExclusiveProjects {    
+    padding: 30px 0 100px;
+}	
+.exclusiveIndent {
+    padding: 70px 15px;
+	background-size: cover !important;
+}	
+.ExclusiveProjects .slick-next.slick-arrow {
+    width: 40px;
+    height: 40px;
+    right: 125px;
+    bottom: -50px;
+    background: #e2e2e2 url(../images/next.svg) 14px 13px no-repeat;
+    background-size: 12px;
+    border-radius: 50%;
+}	
+.ExclusiveProjects .slick-prev.slick-arrow {
+    width: 40px;
+    height: 40px;
+    right: auto;
+	left: 125px;
+    top: auto;
+    bottom: -50px;
+    background: #e2e2e2 url(../images/prev.svg) 14px 13px no-repeat;
+    background-size:7px;
+}
+.ExploreCommercial {   
+    padding: 30px 0 50px;
+}	
+.properti_city {
+    margin: 15px 0;
+}	
+.ExploreCommercial .slick-next.slick-arrow {
+    right: -11px;
+}	
+.ExploreCommercial .slick-prev.slick-arrow {
+    left: -11px;
+}	
+.main-title h2 {
+    font-size: 22px !important;
+    font-weight: 700;
+    line-height: 30px;
+}	
+.main-title p {
+    font-size: 15px;
+    line-height: 1.55rem;
+}	
+.DiscoverFeature {    
+    padding: 40px 0;
+}	
+.DiscoverFeature .slick-next.slick-arrow {
+    width: 42px;
+    height: 42px;
+    right: -10px;
+    background: #e4dfdf url(../images/next.svg) 11px 11px no-repeat;
+    background-size: 17px;
+}	
+.DiscoverFeature .slick-prev.slick-arrow {
+    width: 42px;
+    height: 42px;
+    left: -10px;
+    background: #e4dfdf url(../images/prev.svg) 13px 11px no-repeat;
+    background-size: 9px;
+}		
+.start-partners.home1 {
+    padding: 40px 0;
+}	
+.start-partners.home1 h3 {
+	font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 15px;
+    font-size: 22px;
+}	
+.start-partners.home1 p {
+    line-height: 24px;
+}	
+.footer_social_widget{
+	margin-bottom: 25px;
+}
+.footer_about_widget h4, .footer_qlink_widget h4, .footer_contact_widget h4, .footer_social_widget h4, .footer_apps_widget h4, .footer_about_widget.home2 h4, .footer_qlink_widget.home2 h4, .footer_contact_widget.home2 h4, .footer_social_widget.home2 h4, .footer_apps_widget.home2 h4, .footer_about_widget.home10 h4, .footer_qlink_widget.home10 h4, .footer_contact_widget.home10 h4, .footer_social_widget.home10 h4, .footer_apps_widget.home10 h4 {
+    margin-bottom: 5px;
+}	
+footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}	
+.disclaimerfooter {
+    padding: 0 15px 20px;
+}	
+.inner-banner {
+    padding: 45px 0 50px;
+}
+.inner-banner h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}	
+.homeabout h3 { margin-top: 25px;}	
+.counter {
+    padding: 20px 0;
+}	
+.counterb {
+    text-align: center;
+    margin: 15px 0;
+}	
+	
+
+.ShopWrap {
+    padding: 20px 0;}	
+.shopview {
+    margin: 10px 0;
+}	
+.highlightwrap {
+    background: url("../images/city-sunset.jpg") center 0 no-repeat;
+}	
+.galleryview li {
+    width: 50%;
+}
+.ProjectAmenities {    
+    background: url("../images/game-process.jpg") center 0 no-repeat;
+    background-size: cover;
+    text-align: center;
+}	
+.ProjectAmenities li {
+    padding: 20px 25px;
+    margin: 10px 0;
+    width: 100%;
+}	
+.propertybanner {
+    padding: 0 0 30px;
+    background: url("../images/rendering-modern-dining-room-living-room-with-luxury-decor.jpg") center 0 no-repeat fixed;
+}	
+.propertybanner h1 {
+    margin-top: 40px;
+    font-size: 21px;
+}	
+	
+.propertybanner h2 {
+    margin-top: 35px;
+	font-size: 18px;
+}	
+.under-txt {
+    padding: 15px 0 15px 5px;
+    font-size: 15px;
+}	
+.pricetag span {
+    font-size: 15px;
+    line-height: 20px;
+}	
+.propretyform {
+    background: rgb(0 0 0 / 45%);
+    border-radius: 5px;
+    position: absolute;
+    width: 94%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}	
+.heroform {
+    width: 100%;    
+    padding: 30px 0 0;
+}
+.heroform .form-control {
+    width: 100%;
+}	
+.heroform .btn-seach {
+    width: 100%;
+}	
+.heroarea li {
+    margin: 10px;
+}	
+.exclusivebx {
+    padding: 15px 25px 25px;    border-radius: 25px 0 25px;
+}
+.property-info li {
+    width: 100%;
+}
+.property-info.d-flex {
+    display: block !important;
+}	
+.property-info li span {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 20px;
+}	
+.property-info li span br{ display: none;}	
+.property-info li i {
+    font-size: 15px;
+    color: #fff;
+}	
+.formConnect {
+    width: 100%;
+    margin: 0 auto;
+}	
+
+.PropertyHero {
+    padding: 45px 0 40px;
+}
+.PropertyHero h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}	
+.propertyFrom {
+    padding: 20px 20px 10px;
+    width: 100%;
+}	
+.propertyFrom .btn {
+    width: 46%;
+}	
+.propertyFrom .form-control, .propertyFrom select.form-control:not([size]):not([multiple]) {
+    height: 42px;
+}
+	
+}
