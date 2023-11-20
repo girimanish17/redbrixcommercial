@@ -207,7 +207,7 @@ header .navbar-expand-md .nav-item.add_listing .btn{ background: #ca353b; color:
 .exclusivebx{ background: rgb(0 0 0 / 65%); padding: 15px 35px 25px; width: 100%; max-width: 520px; float: right; border-radius: 45px 0 45px;}
 /*.exclusiveIndent{ padding:2.5% 50px 3.5%;}*/
 .exclusiveIndent {
-    padding: 100px 30px;
+    padding: 80px 30px;
     background-size: 100% !important;
 }
 .exclusiveIndent h3{ margin-bottom: 15px;}
@@ -224,7 +224,6 @@ header .navbar-expand-md .nav-item.add_listing .btn{ background: #ca353b; color:
 .property-info li span{ display: block; margin-top: 10px; font-weight: 600; line-height: 20px; color: #fff;}
 .ExclusiveProjects .slick-next.slick-arrow{ width: 40px; height: 40px; position: absolute; right: 20px; top: auto; bottom: 20px; color: transparent; background: #fff url(../images/next.svg) 14px 12px no-repeat; background-size: 16px; border-radius: 50%; cursor: pointer;}
 .ExclusiveProjects .slick-prev.slick-arrow{ width: 40px; height: 40px; position: absolute; right: 70px; top: auto; bottom: 20px; color: transparent; background: #fff url(../images/prev.svg) 14px 12px no-repeat; border-radius: 50%; background-size: 9px; cursor: pointer;}
-
 
 /* Discover Feature */
 .DiscoverFeature{ width: 100%; padding: 60px 0; position: relative;} 
@@ -598,16 +597,11 @@ footer{ background: #0D263B; width: 100%; padding: 50px 0 0;}
 .RetailGamechanger .btn-visit{ background: #121212; padding: 13px 40px; color: #fff; font-weight: 700;}
 
 .ShopWrap{ width: 100%; padding: 50px 0 70px; position: relative; background: #f8f8f8; border-top: 1px solid #E6E9EC;}
-.shopview{ background: #fff; text-align: center; padding:35px 0 0; border-radius: 15px; margin-bottom: 25px;}
-
-.shopIndent{ background: rgb(189,7,14); background: -moz-linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%); background: -webkit-linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%);background: linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%); padding: 15px;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bd070e",endColorstr="#f0343c",GradientType=1); border-radius: 0 0 15px 15px;}
-
-
-.ShopWrap h3{ color: #101010; font-weight: 600; font-size: 22px; margin-bottom: 15px;}
-.ShopWrap p{ color: #fff; font-size: 16px; line-height: 20px; margin: 0; font-weight: 500;}
-.ShopWrap p.pricetxt{ color: #e0262e; font-size: 20px; line-height: 22px; margin: 0 0 25px; font-weight: 700;}
-.ShopWrap p span{ display: block; font-size: 16px; margin: 8px 0;}
+.shopview{ background: rgb(189,7,14); background: -moz-linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%); background: -webkit-linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%);background: linear-gradient(0deg, rgba(189,7,14,1) 0%, rgba(240,52,60,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bd070e",endColorstr="#f0343c",GradientType=1);; text-align: center; padding:35px; border-radius: 5px; margin-bottom: 25px;}
+.ShopWrap h3{ color: #fff; font-weight: 600; font-size: 20px; margin-bottom: 15px;}
+.ShopWrap p{ color: #fff; font-size: 16px; line-height: 22px; margin: 0 0 15px; font-weight: 500;}
+.ShopWrap p span{ display: block; font-size: 14px; margin: 3px 0;}
 .ShopWrap .btn.btn-view{ background: #dcdcdc; padding: 8px 40px; color: #121212; font-weight: 600; width: 100%;}
 .ShopWrap .btn.btn-view:hover{background: #121212; color: #fff;}
 
@@ -627,10 +621,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bd070e",endCo
 .galleryview h2{ font-weight: 500; font-size: 18px; margin-bottom: 8px; color: #232323;}
 .galleryview h3{ font-weight: 600; margin-bottom: 15px; font-size: 28px; color: #010101;}
 .galleryview li{ width: 20%; float: left; padding: 1px;}
-
-.galleryview .slick-prev.slick-arrow{ width: 40px; height: 40px; position: absolute; left: 25px; top: 42%; color: transparent; background: #eee url(../images/prev.svg) 13px 12px no-repeat; border-radius: 50%; background-size: 9px; cursor: pointer;}
-.galleryview .slick-next.slick-arrow{ width: 40px; height: 40px; position: absolute; right: 25px; top: 42%; color: transparent; background: #eee url(../images/next.svg) 13px 12px no-repeat; background-size: 16px; border-radius: 50%; cursor: pointer;}
-
 
 
 .ProjectAmenities {width: 100%; padding: 4% 0; position: relative;  background: url("../images/game-process.jpg") center -250px no-repeat; background-size: 100%; text-align: center;}
