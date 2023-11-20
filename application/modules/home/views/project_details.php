@@ -205,18 +205,24 @@
                  $pr2 = $this->common_model->getsingle('retail_type', array('id' => $ret_pr->pr_type));
 				 if($ret_pr->pr_title!=''){
                 ?>
-			<div class="col-lg-4 col-md-4 col-12">
+			<div class="col-lg-3 col-md-4 col-12">
 				<div class="shopview clearfix">
 					<h3><?php echo $ret_pr->pr_title; ?></h3>
-					<p><?php echo $ret_pr->pr_price; ?></p>
+					<p class="pricetxt"><?php echo $ret_pr->pr_price; ?></p>
+					<div class="shopIndent">
+				
 					<p><span>Size: <?php echo $ret_pr->pr_size; ?></span><span>Type: <?php if($pr2){echo $pr2->type; } ?></span></p>
+						</div>
 				</div>
+				
+				
+				
 			</div>
 			<?php  } }} ?>
 		</div>
 	</div>
 </section> 	
-<div class="main-title clearfix">
+<div class="main-title clearfix mt-3">
 			<h2>Project's</h2>
 			<h3>Highlights</h3>
 		</div>
@@ -232,7 +238,7 @@
 		</div>
 	</div>
 </section>	
-		<div class="main-title clearfix">
+		<div class="main-title clearfix mt-3">
 			<h2>Project</h2>
 			<h3>Amenities</h3>
 		</div>
@@ -249,19 +255,19 @@
 	</div>
 </section>	
 	
-<div class="galleryview clearfix">
+<div class="galleryview clearfix mt-3">
 	<div class="container">
 		 
-		<div class="main-title clearfix">
+		<div class="main-title clearfix mb-3">
 			<h2>Gallery</h2>
 			<h3><?php if($pro_details){ echo $pro_details->project_title; } ?></h3>
 		</div>
 		
-		<ul>
+		<div class="slider gallery-slider">
 			<?php if($gallery) { foreach($gallery as $gal) { ?>
-			<li><img src="<?php echo base_url(); ?>uploads/gallery/<?php echo $gal->image; ?>" class="img-fluid" alt="gallery"/></li>
+			<div><img src="<?php echo base_url(); ?>uploads/gallery/<?php echo $gal->image; ?>" class="img-fluid" alt="gallery"/></div>
 			<?php }} ?>
-		</ul>
+		</div>
 		
 	</div>
 </div>	
